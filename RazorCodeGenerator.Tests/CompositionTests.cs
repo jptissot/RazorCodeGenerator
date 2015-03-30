@@ -31,7 +31,7 @@ namespace RazorCodeGenerator.Tests
         {
             var div = Html.Div();
             var label = div.Elements.Add(Html.Label(Attr.For("someId")));
-            label.Elements.Add(Razor.DropdownHelper("someId", "Model.SelectListAccessor", Attr.Id("someId")));
+         //   label.Elements.Add(Razor.DropdownHelper("someId", "Model.SelectListAccessor", Attr.Id("someId")));
         }
     }
 }
