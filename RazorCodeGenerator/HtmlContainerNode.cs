@@ -15,7 +15,7 @@ namespace RazorCodeGenerator {
             var sb = new StringBuilder();
             sb.Append("<" + Name + HtmlAttributes.GenerateHtmlAttributes()+">");
             sb.Append(Elements.Generate());
-            sb.Append("</ " + Name + ">");
+            sb.Append("</" + Name + ">");
             return sb.ToString();
         }
     }

@@ -1,4 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 
 namespace RazorCodeGenerator {
@@ -13,6 +15,13 @@ namespace RazorCodeGenerator {
         }
 
         public T Add<T>(T node) where T:Node{
+
+            if(node is RazorElseStatement) {
+                var last = _nodes.LastOrDefault();
+                if(last != null && !(last is RazorIfStatement)) {
+                    throw new ArgumentException("Can only add else statement after if statement");
+                }
+            }
             _nodes.Add(node);
             return node;
         }

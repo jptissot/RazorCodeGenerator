@@ -57,8 +57,8 @@ namespace RazorCodeGenerator {
         }
 
         private static string GetRazorAttributeName(string name) {
-            if(name == "class") {
-                return "@class";
+            if(name == "class" || name == "id") {
+                return "@"+name;
             }
             if(name.Contains("-")) {
                 return name.Replace("-", "_");

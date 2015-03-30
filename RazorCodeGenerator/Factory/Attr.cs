@@ -6,6 +6,10 @@
         public static Attribute Style(string styleValue) {
             return new Attribute("style", styleValue);
         }
+        public static Attribute For(string value)
+        {
+            return new Attribute("for", value);
+        }
         public static Attribute Name(string value) {
             return new Attribute("name", value);
         }

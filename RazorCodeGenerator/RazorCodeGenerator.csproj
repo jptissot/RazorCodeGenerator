@@ -44,6 +44,7 @@
     <Compile Include="Factory\Attr.cs" />
     <Compile Include="Factory\Html.cs" />
     <Compile Include="Attribute.cs" />
+    <Compile Include="Factory\Razor.cs" />
     <Compile Include="HtmlContainerNode.cs" />
     <Compile Include="HtmlNode.cs" />
     <Compile Include="HtmlSelfClosingNode.cs" />
