@@ -1,9 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
-
-namespace RazorCodeGenerator {
-
-    public class Attribute {
+﻿namespace RazorCodeGenerator.Attributes {
+    public class Attribute : IAttribute {
         private readonly string _name;
         private readonly string _value;
 

@@ -3,18 +3,19 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 
-namespace RazorCodeGenerator {
+namespace RazorCodeGenerator.Attributes {
     public class AttributeCollection {
-        private readonly Collection<Attribute> _attributes;
+        private readonly Collection<IAttribute> _attributes;
         public AttributeCollection() {
-            _attributes = new Collection<Attribute>();
+            _attributes = new Collection<IAttribute>();
         }
-        public AttributeCollection(IList<Attribute> attributes)
+        public AttributeCollection(IList<IAttribute> attributes)
         {
-            _attributes = new Collection<Attribute>(attributes);
+            _attributes = new Collection<IAttribute>(attributes);
         }
 
-        public T Add<T>(T attribute) where T : Attribute {
+        public T Add<T>(T attribute) where T : IAttribute
+        {
             _attributes.Add(attribute);
             return attribute;
         }

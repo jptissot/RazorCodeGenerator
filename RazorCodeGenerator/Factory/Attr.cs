@@ -1,4 +1,6 @@
-﻿namespace RazorCodeGenerator.Factory {
+﻿using RazorCodeGenerator.Attributes;
+
+namespace RazorCodeGenerator.Factory {
     public static class Attr {
         public static Attribute Id(string idValue) {
             return new Attribute("id", idValue);

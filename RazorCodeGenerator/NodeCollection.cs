@@ -1,20 +1,25 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using RazorCodeGenerator.RazorNodes;
 
 namespace RazorCodeGenerator {
     public class NodeCollection {
-        private Collection<Node> _nodes;
+        private readonly Collection<INode> _nodes;
 
         public NodeCollection() {
-            _nodes = new Collection<Node>();
+            _nodes = new Collection<INode>();
         }
-        public NodeCollection(Collection<Node> nodes) {
-            _nodes = nodes;
+        public NodeCollection(IList<INode> nodes)
+        {
+            _nodes = new Collection<INode>(nodes);
         }
 
-        public T Add<T>(T node) where T:Node{
+        public T Add<T>(T node) where T : INode
+        {
 
             if(node is RazorElseStatement) {
                 var last = _nodes.LastOrDefault();

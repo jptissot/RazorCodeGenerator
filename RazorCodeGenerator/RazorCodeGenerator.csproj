@@ -39,19 +39,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AttributeCollection.cs" />
-    <Compile Include="CompoundAttribute.cs" />
+    <Compile Include="Attributes\AttributeCollection.cs" />
+    <Compile Include="Attributes\CompoundAttribute.cs" />
+    <Compile Include="Attributes\IAttribute.cs" />
+    <Compile Include="Attributes\RazorValueAttribute.cs" />
     <Compile Include="Factory\Attr.cs" />
     <Compile Include="Factory\Html.cs" />
-    <Compile Include="Attribute.cs" />
+    <Compile Include="Attributes\Attribute.cs" />
     <Compile Include="Factory\Razor.cs" />
-    <Compile Include="HtmlContainerNode.cs" />
-    <Compile Include="HtmlNode.cs" />
-    <Compile Include="HtmlSelfClosingNode.cs" />
+    <Compile Include="HtmlNodes\HtmlContainerNode.cs" />
+    <Compile Include="HtmlNodes\HtmlSelfClosingNode.cs" />
+    <Compile Include="INode.cs" />
     <Compile Include="LinqExtensions.cs" />
-    <Compile Include="Node.cs" />
+    <Compile Include="RazorNodes\IRazorContainer.cs" />
+    <Compile Include="RazorNodes\IRazorStringProvider.cs" />
+    <Compile Include="RazorNodes\RazorInputHelper.cs" />
     <Compile Include="NodeCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RazorNodes\RazorAssignment.cs" />
+    <Compile Include="RazorNodes\RazorCodeBlock.cs" />
+    <Compile Include="RazorNodes\RazorElseStatement.cs" />
+    <Compile Include="RazorNodes\RazorIfStatement.cs" />
+    <Compile Include="RazorNodes\RazorModelValueAcessor.cs" />
+    <Compile Include="RazorNodes\RazorRawHelper.cs" />
+    <Compile Include="RazorNodes\RazorUrlHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

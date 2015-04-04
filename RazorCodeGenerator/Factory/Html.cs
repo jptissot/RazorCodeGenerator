@@ -1,9 +1,7 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RazorCodeGenerator.HtmlNodes;
+using Attribute = RazorCodeGenerator.Attributes.Attribute;
 
-namespace RazorCodeGenerator
+namespace RazorCodeGenerator.Factory
 {
     public static class Html
     {
@@ -11,7 +9,7 @@ namespace RazorCodeGenerator
             return new HtmlContainerNode("div", attributes);
         }
 
-        public static HtmlNode Input(params Attribute[] attributes) {
+        public static HtmlSelfClosingNode Input(params Attribute[] attributes) {
             return new HtmlSelfClosingNode("input",attributes);
         }
 
@@ -19,8 +17,7 @@ namespace RazorCodeGenerator
             return new HtmlContainerNode("span",attributes);
         }
 
-        public static HtmlContainerNode Label(params Attribute[] attributes)
-        {
+        public static HtmlContainerNode Label(params Attribute[] attributes) {
             return new HtmlContainerNode("label", attributes);
         }
     }
